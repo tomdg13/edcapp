@@ -87,8 +87,6 @@ class _MenuPageState extends State<MenuPage> {
         return [
           _TabItem(t('driver_dashboard'), Icons.home, driver_ctrl.DriverPage()),
           _TabItem(t('message'), Icons.message, message_ctrl.MessagePage()),
-          // _TabItem(t('my_car'), Icons.directions_car, CarListPage()),
-          // _TabItem(t('my_car'), Icons.directions_car, const CarListPage()),
           _TabItem(t('car'), Icons.directions_car, mycar_ctrl.MyCarPage()),
           _TabItem(t('setting'), Icons.settings, _buildProfilePage()),
         ];
