@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sabaicub/config/theme.dart';
-import 'package:sabaicub/login/regiteruser.dart';
+import 'package:POSApp/config/theme.dart';
+import 'package:POSApp/login/regiteruser.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/simple_translations.dart';
 

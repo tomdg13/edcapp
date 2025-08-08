@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-// import 'package:sabaicub/car/CarListPage.dart';
-import 'package:sabaicub/car/mycar.dart' as mycar_ctrl;
-import 'package:sabaicub/driver/DriverPage.dart' as driver_ctrl;
-import 'package:sabaicub/history/ProfilePage.dart' as profile_ctrl;
-import 'package:sabaicub/history/bookingListPage.dart' as booklist_ctrl;
-import 'package:sabaicub/history/MessagePage.dart' as message_ctrl;
-// import 'package:sabaicub/car/CarListPage.dart';
-import 'package:sabaicub/config/theme.dart';
+// import 'package:POSApp/car/CarListPage.dart';
+import 'package:POSApp/car/mycar.dart' as mycar_ctrl;
+import 'package:POSApp/driver/DriverPage.dart' as driver_ctrl;
+import 'package:POSApp/history/ProfilePage.dart' as profile_ctrl;
+import 'package:POSApp/history/bookingListPage.dart' as booklist_ctrl;
+import 'package:POSApp/history/MessagePage.dart' as message_ctrl;
+// import 'package:POSApp/car/CarListPage.dart';
+import 'package:POSApp/config/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/simple_translations.dart';
 

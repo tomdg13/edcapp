@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sabaicub/config/theme.dart';
+import 'package:POSApp/config/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'login/login_page.dart';
 import 'menu/menu_page.dart';
@@ -70,10 +70,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     if (!ThemeConfig.isValidTheme(themeName)) {
       return; // Invalid theme, don't change
     }
-    
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('selectedTheme', themeName);
-    
+
     if (mounted) {
       setState(() {
         currentTheme = themeName;
@@ -93,7 +93,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return ThemeData(
       primarySwatch: _createMaterialColor(primaryColor),
       primaryColor: primaryColor,
-      
+
       // AppBar theme
       appBarTheme: AppBarTheme(
         backgroundColor: primaryColor,
@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         iconTheme: IconThemeData(color: buttonTextColor),
         actionsIconTheme: IconThemeData(color: buttonTextColor),
       ),
-      
+
       // Button themes
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -114,30 +114,26 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           foregroundColor: buttonTextColor,
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
-      
+
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: primaryColor,
           side: BorderSide(color: primaryColor, width: 1.5),
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         ),
       ),
-      
+
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: primaryColor,
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
       ),
-      
+
       // Input decoration theme
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
@@ -158,7 +154,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         ),
         floatingLabelStyle: TextStyle(color: primaryColor),
       ),
-      
+
       // Other component themes
       checkboxTheme: CheckboxThemeData(
         fillColor: MaterialStateProperty.resolveWith((states) {
@@ -169,7 +165,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         }),
         checkColor: MaterialStateProperty.all(buttonTextColor),
       ),
-      
+
       radioTheme: RadioThemeData(
         fillColor: MaterialStateProperty.resolveWith((states) {
           if (states.contains(MaterialState.selected)) {
@@ -178,7 +174,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           return Colors.grey;
         }),
       ),
-      
+
       switchTheme: SwitchThemeData(
         thumbColor: MaterialStateProperty.resolveWith((states) {
           if (states.contains(MaterialState.selected)) {
@@ -193,54 +189,53 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           return Colors.grey.withOpacity(0.3);
         }),
       ),
-      
+
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: primaryColor,
         foregroundColor: buttonTextColor,
         elevation: 6,
       ),
-      
+
       progressIndicatorTheme: ProgressIndicatorThemeData(color: primaryColor),
-      
+
       // Scaffold and text themes
       scaffoldBackgroundColor: backgroundColor,
-      
+
       textTheme: TextTheme(
         bodyLarge: TextStyle(color: textColor),
         bodyMedium: TextStyle(color: textColor),
         bodySmall: TextStyle(color: textColor),
         headlineLarge: TextStyle(color: textColor, fontWeight: FontWeight.bold),
-        headlineMedium: TextStyle(color: textColor, fontWeight: FontWeight.bold),
+        headlineMedium: TextStyle(
+          color: textColor,
+          fontWeight: FontWeight.bold,
+        ),
         headlineSmall: TextStyle(color: textColor, fontWeight: FontWeight.w600),
         titleLarge: TextStyle(color: textColor, fontWeight: FontWeight.w600),
         titleMedium: TextStyle(color: textColor, fontWeight: FontWeight.w500),
         titleSmall: TextStyle(color: textColor, fontWeight: FontWeight.w500),
       ),
-      
+
       // Color scheme
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: primaryColor,
-        brightness: Brightness.light,
-        background: backgroundColor,
-        surface: backgroundColor,
-      ).copyWith(
-        primary: primaryColor,
-        secondary: ThemeConfig.getThemeColors(currentTheme)['accent'],
-      ),
-      
+      colorScheme:
+          ColorScheme.fromSeed(
+            seedColor: primaryColor,
+            brightness: Brightness.light,
+            background: backgroundColor,
+            surface: backgroundColor,
+          ).copyWith(
+            primary: primaryColor,
+            secondary: ThemeConfig.getThemeColors(currentTheme)['accent'],
+          ),
+
       // Card theme
       cardTheme: CardThemeData(
         elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      
+
       // Divider theme
-      dividerTheme: DividerThemeData(
-        color: Colors.grey.shade300,
-        thickness: 1,
-      ),
+      dividerTheme: DividerThemeData(color: Colors.grey.shade300, thickness: 1),
     );
   }
 

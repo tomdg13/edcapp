@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:sabaicub/config/config.dart';
-import 'package:sabaicub/config/theme.dart'; // Use main ThemeConfig
-import 'package:sabaicub/car/carAddPage.dart';
+import 'package:POSApp/config/config.dart';
+import 'package:POSApp/config/theme.dart'; // Use main ThemeConfig
+import 'package:POSApp/car/carAddPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/simple_translations.dart';
 import 'package:image_picker/image_picker.dart';

@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:sabaicub/config/config.dart';
-import 'package:sabaicub/config/theme.dart';
+import 'package:POSApp/config/config.dart';
+import 'package:POSApp/config/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -334,7 +334,7 @@ class _VerifyOtpPageState extends State<VerifyOtpPage>
                               color: ThemeConfig.getPrimaryColor(currentTheme),
                               size: 20,
                             ),
-                           
+
                             Container(
                               width: 1,
                               height: 20,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:sabaicub/config/config.dart';
-import 'package:sabaicub/driver/BookingConfirmPage.dart';
-// import 'package:sabaicub/config/theme_config.dart'; // Add this import
-import 'package:sabaicub/config/theme.dart';
+import 'package:POSApp/config/config.dart';
+import 'package:POSApp/driver/BookingConfirmPage.dart';
+// import 'package:POSApp/config/theme_config.dart'; // Add this import
+import 'package:POSApp/config/theme.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/simple_translations.dart';
