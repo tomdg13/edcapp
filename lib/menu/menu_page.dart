@@ -1,11 +1,7 @@
+import 'package:POSApp/01Group/GroupListPage.dart';
+import 'package:POSApp/menu/menu_setting.dart';
 import 'package:flutter/material.dart';
-// import 'package:POSApp/car/CarListPage.dart';
-import 'package:POSApp/car/mycar.dart' as mycar_ctrl;
-import 'package:POSApp/driver/DriverPage.dart' as driver_ctrl;
-import 'package:POSApp/history/ProfilePage.dart' as profile_ctrl;
-import 'package:POSApp/history/bookingListPage.dart' as booklist_ctrl;
-import 'package:POSApp/history/MessagePage.dart' as message_ctrl;
-// import 'package:POSApp/car/CarListPage.dart';
+
 import 'package:POSApp/config/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/simple_translations.dart';
@@ -74,7 +70,7 @@ class _MenuPageState extends State<MenuPage> {
     return _TabItem(
       SimpleTranslations.get(langCodes, 'history'),
       Icons.history,
-      booklist_ctrl.BookingListPage(),
+      GroupListPage(),
     );
   }
 
@@ -85,17 +81,10 @@ class _MenuPageState extends State<MenuPage> {
       case 'driver':
       default:
         return [
-          _TabItem(t('driver_dashboard'), Icons.home, driver_ctrl.DriverPage()),
-          _TabItem(t('message'), Icons.message, message_ctrl.MessagePage()),
-          _TabItem(t('car'), Icons.directions_car, mycar_ctrl.MyCarPage()),
-          _TabItem(t('setting'), Icons.settings, _buildProfilePage()),
+          _TabItem(t('Group'), Icons.directions_car, GroupListPage()),
+          _TabItem(t('setting'), Icons.settings, MenuSettingsPage()),
         ];
     }
-  }
-
-  // Enhanced ProfilePage with theme selector
-  Widget _buildProfilePage() {
-    return profile_ctrl.ProfilePage();
   }
 
   // ignore: unused_element
