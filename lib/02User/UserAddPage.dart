@@ -217,7 +217,7 @@ class _UserAddPageState extends State<UserAddPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          SimpleTranslations.get(langCode, 'addNewUser') ?? 'Add New User',
+          SimpleTranslations.get(langCode, 'addNewUser'),
         ),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,

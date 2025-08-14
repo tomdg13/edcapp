@@ -323,10 +323,7 @@ class _UserListPageState extends State<UserListPage> {
       fetchUsers(showLoading: false);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-            SimpleTranslations.get(langCode, 'userCreatedSuccess') ??
-                'User created successfully!',
-          ),
+          content: Text(SimpleTranslations.get(langCode, 'userCreatedSuccess')),
           backgroundColor: Colors.green,
         ),
       );
@@ -359,6 +356,7 @@ class _UserListPageState extends State<UserListPage> {
     // Extract other fields (your API format)
     final phone = user['phone'] ?? user['PHONE'] ?? '';
     final email = user['email'] ?? user['EMAIL'] ?? '';
+    // ignore: unused_local_variable
     final userCode =
         user['userCode'] ?? user['user_code'] ?? user['USER_CODE'] ?? '';
     final status =
@@ -654,7 +652,7 @@ class _UserListPageState extends State<UserListPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(SimpleTranslations.get(langCode, 'Users') ?? 'Users'),
+        title: Text(SimpleTranslations.get(langCode, 'Users')),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -723,8 +721,7 @@ class _UserListPageState extends State<UserListPage> {
                         Text(
                           isSearching || selectedStatusFilter != 'ALL'
                               ? 'No users found matching your criteria'
-                              : SimpleTranslations.get(langCode, 'noUsers') ??
-                                    'No users available',
+                              : SimpleTranslations.get(langCode, 'noUsers'),
                           style: const TextStyle(
                             fontSize: 18,
                             color: Colors.grey,
@@ -768,8 +765,7 @@ class _UserListPageState extends State<UserListPage> {
         onPressed: _navigateToAddUser,
         backgroundColor: Colors.green,
         child: const Icon(Icons.add, color: Colors.white),
-        tooltip:
-            SimpleTranslations.get(langCode, 'addNewUser') ?? 'Add New User',
+        tooltip: SimpleTranslations.get(langCode, 'addNewUser'),
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:POSApp/config/config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../utils/simple_translations.dart';
 
 class UserDetailPage extends StatefulWidget {
   final Map<String, dynamic> userData;
@@ -535,6 +534,7 @@ class _UserDetailPageState extends State<UserDetailPage> {
 
   // Generate a temporary password
   String _generateTempPassword() {
+    // ignore: unused_local_variable
     const String chars =
         'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     final random = DateTime.now().millisecondsSinceEpoch;
